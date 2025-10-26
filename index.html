@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liceo Bolivariano Profesor Alexander Cortez</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header class="header" id="site-header">
+        <nav class="navbar">
+            <div class="logo-wrap">
+                <div class="logo-mark" aria-hidden="true">
+                    <!-- SVG placeholder del logo con iniciales -->
+                    <svg width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img">
+                        <circle cx="50" cy="50" r="48" fill="#003366" />
+                        <text x="50%" y="55%" font-size="40" fill="#aee6ff" text-anchor="middle" font-family="Segoe UI, Arial" font-weight="700">AC</text>
+                    </svg>
+                </div>
+                <div class="logo-text">Liceo Bolivariano Profesor Alexander Cortez</div>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu" role="button" tabindex="0">
+                <!-- Icono PNG para mayor nitidez en pantallas HiDPI -->
+                <img src="img/Menu Hamburgesa.png" alt="Icono menú" class="hamburger-icon" width="36" height="28">
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="drop-toggle">Iniciar sesión</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="open-modal" data-target="modal-estudiante">Estudiante</a></li>
+                        <li><a href="#" class="open-modal" data-target="modal-profesor">Profesor</a></li>
+                    </ul>
+                </li>
+                <li><a href="sobre.html">Sobre el liceo</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="contacto.html">Contactarnos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <h1>Bienvenidos al Liceo Bolivariano Profesor Alexander Cortez</h1>
+                <p>
+                    Institución educativa dedicada a la formación integral de jóvenes, promoviendo valores, excelencia académica y el desarrollo de habilidades para la vida. Nuestro liceo cuenta con un equipo docente comprometido y una amplia oferta de materias para potenciar el aprendizaje.
+                </p>
+            </div>
+            <div class="hero-images">
+                <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="Liceo" class="main-img">
+                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Estudiantes" class="secondary-img">
+            </div>
+        </section>
+        <section class="materias reveal" id="materias">
+            <h2>Materias que ofrecemos</h2>
+            <ul class="materias-list">
+                <li>Matemáticas</li>
+                <li>Lengua y Literatura</li>
+                <li>Historia</li>
+                <li>Geografía</li>
+                <li>Biología</li>
+                <li>Química</li>
+                <li>Física</li>
+                <li>Educación Física</li>
+                <li>Inglés</li>
+                <li>Informática</li>
+                <li>Tecnología</li>
+                <li>Artes Plásticas</li>
+                <li>Música</li>
+                <li>Filosofía</li>
+                <li>Psicología</li>
+                <li>Economía</li>
+                <li>Administración</li>
+                <li>Contabilidad</li>
+                <li>Sociología</li>
+                <li>Educación Cívica</li>
+                <li>Educación para la Salud</li>
+                <li>Robótica</li>
+                <li>Diseño y Tecnología</li>
+                <li>Emprendimiento</li>
+                <li>Agricultura</li>
+                <li>Ecología</li>
+                <li>Informática Avanzada</li>
+                <li>Teatro</li>
+                <li>Debate y Oratoria</li>
+                <li>Educación Ambiental</li>
+            </ul>
+        </section>
+        
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Liceo Bolivariano Profesor Alexander Cortez. Todos los derechos reservados.</p>
+    </footer>
+    <!-- Modales de inicio de sesión -->
+    <div class="modal" id="modal-estudiante" aria-hidden="true" role="dialog" aria-labelledby="modal-estudiante-title">
+        <div class="modal-overlay" data-close="true"></div>
+        <div class="modal-content">
+            <button class="modal-close" data-close aria-label="Cerrar">×</button>
+            <h3 id="modal-estudiante-title">Iniciar sesión - Estudiante</h3>
+            <form id="form-estudiante" class="modal-form">
+                <label>Nombre completo<input type="text" name="nombre" required></label>
+                <label>Correo electrónico<input type="email" name="email" required></label>
+                <label>Grado / Sección<input type="text" name="grado" required></label>
+                <label>Contraseña<input type="password" name="password" required></label>
+                <div class="form-actions">
+                    <button type="submit" class="btn primary">Ingresar</button>
+                    <button type="button" class="btn" data-close>Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-profesor" aria-hidden="true" role="dialog" aria-labelledby="modal-profesor-title">
+        <div class="modal-overlay" data-close="true"></div>
+        <div class="modal-content">
+            <button class="modal-close" data-close aria-label="Cerrar">×</button>
+            <h3 id="modal-profesor-title">Iniciar sesión - Profesor</h3>
+            <form id="form-profesor" class="modal-form">
+                <label>Nombre completo<input type="text" name="nombre" required></label>
+                <label>Correo electrónico<input type="email" name="email" required></label>
+                <label>Asignatura principal<input type="text" name="asignatura" required></label>
+                <label>Contraseña<input type="password" name="password" required></label>
+                <div class="form-actions">
+                    <button type="submit" class="btn primary">Ingresar</button>
+                    <button type="button" class="btn" data-close>Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
